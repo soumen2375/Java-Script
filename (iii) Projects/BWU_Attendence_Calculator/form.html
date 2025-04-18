@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User Login</title>
+    <link rel="stylesheet" href="form.css"> 
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="main"> 
+			<div class="signup">
+				<form>
+					<div class="heading">
+						<label>Attendence Calculator</label>
+					</div>
+					<h3>How many classes have you had ?</h3>
+					<input type="number" id="total_class" placeholder="Toatal Class" required="">
+					<h3> How many classes did you attend ?</h3>
+					<input type="number" id="total_attend" placeholder="Attending Class" required="">
+					<button>Submit</button>
+				</form>
+			</div>
+			<h3 id="current_percentage_display"></h3>
+	<h3 id="need_attedece_display"></h3>
+	</div>
+	<script>
+		document.querySelector("button").addEventListener("click", function (event) {
+			event.preventDefault(); // Prevent form submission
+	
+			let total_class = document.getElementById("total_class").value;
+			let total_attend = document.getElementById("total_attend").value;
+	
+			// Ensure inputs are numbers
+			total_class = parseInt(total_class);
+			total_attend = parseInt(total_attend);
+	
+			if (isNaN(total_class) || isNaN(total_attend) || total_class <= 0) {
+				alert("Please enter valid numbers for total classes and attended classes.");
+				return;
+			}
+	
+			// Calculate current percentage
+			let current_percentage = (total_attend / total_class) * 100;
+			document.getElementById("current_percentage_display").innerHTML = `Current Percentage: ${current_percentage.toFixed(2)}%`;
+	
+			// Calculate needed attendance
+			let need_attedece = Math.ceil((75 * total_class) / 100 - total_attend);
+			if (need_attedece > 0) {
+				document.getElementById("need_attedece_display").innerHTML = `You need to attend ${need_attedece} more classes to reach 75%.`;
+			} else {
+				document.getElementById("need_attedece_display").innerHTML = `You have already met the 75% attendance requirement.`;
+			}
+		});
+	</script>
+</body>
+</html>

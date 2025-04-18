@@ -1,0 +1,89 @@
+<!-- Create a Function to calculate average of 3 numbers -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVG CALCULATOR</title>
+    <style>
+        #outer {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #main_box {
+            width: 50vh;
+            height: 35vh;
+            background-color: blueviolet;
+            color: white;
+            text-align: center;
+            border-radius: 5%;
+        }
+
+        input {
+            border-style: none;
+            border-radius: 5px;
+            margin: 5px;
+
+        }
+
+        h3 {
+            background-color: white;
+            color: rgb(120, 24, 209);
+            word-spacing: 10px;
+        }
+
+        button {
+            background-color: rgb(170, 255, 0);
+            border-style: none;
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 8px 5px 8px 5px;
+        }
+
+        #calculate_button {
+            padding: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="outer">
+        <div id="main_box">
+            <h3>AVERAGE CALCULATOR</h3>
+            <input type="number" id="first_input" placeholder="Enter first number"> <br>
+            <input type="number" id="second_input" placeholder="Enter second number"> <br>
+            <input type="number" id="third_input" placeholder="Enter third number"> <br>
+
+            <div id="calculate_button"><button id="calculate">Calculate</button></div>
+
+            <div>
+                <h4 id="average"></h4>
+            </div>
+        </div>
+    </div>
+    <script>
+        function avgCal(a, b, c) {
+            let average = (a + b + c) / 3;
+            document.getElementById("average").innerHTML =  "Average: " + average.toFixed(2);
+        }
+
+        document.getElementById("calculate").onclick = function(){
+            let a = parseFloat(document.getElementById("first_input").value);
+            let b = parseFloat(document.getElementById("second_input").value);
+            let c = parseFloat(document.getElementById("third_input").value);
+
+            if(isNaN(a) || isNaN(b) || isNaN(c)){
+                document.getElementById("average").innerHTML= "Please Enter all numbers";
+            }
+            else{
+                avgCal(a, b, c);
+            }
+        }
+    </script>
+</body>
+
+</html>

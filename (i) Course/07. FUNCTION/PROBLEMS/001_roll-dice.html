@@ -1,0 +1,60 @@
+<!-- Create a Function to roll a dice & always display the value of the dice (1 to 6) -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roll</title>
+    <style>
+        #outer{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;            
+        }
+        #main_box{
+            width: 50vh;
+            height: 30vh;
+            background-color: blueviolet;
+            color: white;
+            text-align: center;
+            border-radius: 5%;
+        }
+        h2{
+            background-color: white;
+            color: rgb(120, 24, 209);
+            word-spacing: 10px;
+        }
+        button{
+            background-color: rgb(170, 255, 0);
+            border-style: none;
+            border-radius: 5px;
+            cursor: pointer;
+            padding:10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="outer">
+        <div id="main_box">
+            <h2>ROLL A DICE</h2>
+            <p id="diceroll_value"></p>
+            <button id="refresh_button" >Roll Dice</button>
+        </div>
+    </div>
+    <script>
+        function rollDice() {
+            let dice_value = Math.floor((Math.random() * 6) + 1);
+            document.getElementById("diceroll_value").innerHTML = dice_value;
+        }
+        //When button click it's refresh
+        document.getElementById("refresh_button").onclick = rollDice;
+
+        // Optionally, roll the dice once when the page loads
+        rollDice();
+    </script>
+</body>
+
+</html>
