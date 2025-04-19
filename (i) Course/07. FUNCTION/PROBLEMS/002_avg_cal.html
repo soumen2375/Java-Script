@@ -72,9 +72,9 @@
         }
 
         document.getElementById("calculate").onclick = function(){
-            let a = parseFloat(document.getElementById("first_input").value);
-            let b = parseFloat(document.getElementById("second_input").value);
-            let c = parseFloat(document.getElementById("third_input").value);
+            let a = Math.abs((document.getElementById("first_input").value));
+            let b = Math.abs(parseFloat(document.getElementById("second_input").value));
+            let c = Math.abs((document.getElementById("third_input").value));
 
             if(isNaN(a) || isNaN(b) || isNaN(c)){
                 document.getElementById("average").innerHTML= "Please Enter all numbers";
