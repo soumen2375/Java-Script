@@ -7,10 +7,11 @@
 <br>
 
 #   map
--   Transform each element and return a new array
+-   Transform each element
+-   return a new array
 <br>
 
-#   fliter
+#   fliter  
 -   True or False check if condition true then it's store in New Array
 <br>
 
