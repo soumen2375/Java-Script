@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+
+<body>
+    <script>
+        // Array
+        let arr = ["Soumen", 21, "kolkata"];
+        let [myname, myage, mycity] = arr;
+
+        // Object 
+        let myData = {
+            name: "Soumen",
+            email: "soumen1234@gmail.com",
+            age: 21,
+            password: 1256
+        }
+
+        let { name, password: security, city = "Kolkata" } = myData;
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest</title>
+</head>
+
+<body>
+    <script>
+        function sum(...args) {
+            for (i = 0; i < args.length; i++) {
+                console.log(args[i]);
+            }
+        }
+
+        sum(1, 2, 3, 4);
+
+        //here 'first' print first element and rest of the print by 'args' 
+        function my(first, ...args) {
+            console.log("First element print: " + first);
+            console.log("All element print: ");
+            console.log(...args);
+        }
+    </script>
+</body>
+
+</html>

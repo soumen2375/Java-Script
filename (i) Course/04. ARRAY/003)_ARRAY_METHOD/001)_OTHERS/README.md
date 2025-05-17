@@ -24,4 +24,5 @@
 <br>
 
 #   Reduce
--   
+-   "reduce" an array to a single value by applying a function to each element (from left to right).
+-   array.reduce(callback, initialValue)

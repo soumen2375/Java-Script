@@ -1,0 +1,45 @@
+<!-- Square and sum the array elements using the arrow function and then find the average of the array. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* Procees: 1
+        let avg = (...args) => {
+            let sum = 0, avg = 0;
+
+            for (i = 0; i < args.length; i++) {
+                let sqr = args[i] * args[i];    //first: square cal.
+                sum = sum + sqr;                //second: sum of square cal.
+            }
+
+            avg = sum / args.length;            //third: avg. cal.
+            console.log(avg);
+        }
+
+        let arr = [2, 5, 7];
+        avg(...arr);
+        */
+
+        // Process:2
+        let arr = [2, 5, 7];
+
+        let sqr = arr.map((el) =>  el * el);
+        console.log(sqr);
+
+        let sum = sqr.reduce((sum, el) => sum = sum + el);
+        console.log(sum);
+
+        let avg = sum / arr.length;
+        console.log(avg);
+
+    </script>
+</body>
+
+</html>

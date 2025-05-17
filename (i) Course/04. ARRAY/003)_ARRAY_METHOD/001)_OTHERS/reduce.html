@@ -1,0 +1,24 @@
+<!-- Using reduce we can calculate maximum of an array -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = [2, 40, 78, 69, 87, 23];
+        let maxValue = arr.reduce((maximum, el) => {
+            if (el > maximum) {
+                maximum = el;
+            }
+            return maximum;
+        });
+        console.log(maxValue);
+    </script>
+</body>
+
+</html>

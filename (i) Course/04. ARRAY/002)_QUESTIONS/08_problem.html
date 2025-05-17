@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let personalData = {
+            name: "Soumen",
+            age: 21,
+            city: "Kolkata"
+        }
+        let degree = {
+            college: "Brainware University",
+            course: "B.Tech CSE(DS)",
+            batch: 2022
+        }
+
+        const MergeMyData = (obj1, obj2) =>{
+            return {...obj1, ...obj2}
+        };
+
+        console.log(MergeMyData(personalData, degree));
+    </script>
+</body>
+</html>
