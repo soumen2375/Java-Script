@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | PROBLEM</title>
+    <style>
+        #btn {
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        let input = document.createElement('input');
+        let h1 = document.createElement('h1');
+        let btn = document.createElement('button');
+        let p = document.createElement('p');
+
+        document.querySelector('body').append(h1);
+        document.querySelector('body').append(p);
+        document.querySelector('body').append(input);
+        document.querySelector('body').append(btn);
+
+        btn.innerText = "Click me";
+        h1.innerText = "DOM Practice";
+        p.innerHTML = "Welcome to JavaScript <b>DOM </b> journey";
+
+        input.setAttribute('placeholder', 'username');
+        btn.setAttribute('id', 'btn');
+
+        document.querySelector('#btn')
+        h1.style.color = "purple";
+
+
+    </script>
+</body>
+
+</html>
