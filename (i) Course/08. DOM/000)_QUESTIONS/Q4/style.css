@@ -1,0 +1,7 @@
+/* For scrolling */
+#scroll {
+    height: 100px;
+    width: 500px;
+    overflow: auto; /* Enable scrolling */
+    border: 1px solid black;
+}

@@ -1,0 +1,25 @@
+body{
+    min-height: 100vh;
+    text-align: center;
+
+}
+button{
+    color: white;
+    background-color: blue;
+    border: none;
+    height: 30px;
+    width: 125px;
+    font-size: 16px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+div{
+    height: 200px;
+    width: 350px;
+    border: 2px solid black;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
