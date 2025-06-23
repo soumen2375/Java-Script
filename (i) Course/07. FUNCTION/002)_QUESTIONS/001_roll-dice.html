@@ -6,14 +6,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dice Roll</title>
+
+    <!-- CSS -->
     <style>
-        #outer{
+        #outer {
             height: 100vh;
             display: flex;
             justify-content: center;
-            align-items: center;            
+            align-items: center;
         }
-        #main_box{
+
+        #main_box {
             width: 50vh;
             height: 30vh;
             background-color: blueviolet;
@@ -21,39 +24,57 @@
             text-align: center;
             border-radius: 5%;
         }
-        h2{
+
+        h2 {
             background-color: white;
             color: rgb(120, 24, 209);
             word-spacing: 10px;
         }
-        button{
+
+        button {
             background-color: rgb(170, 255, 0);
             border-style: none;
             border-radius: 5px;
             cursor: pointer;
-            padding:10px;
+            padding: 10px;
+            margin-top: 25px;
+            font-size: 17px;
+        }
+
+        h3 {
+            display: inline;
+            font-size: 30px;
+            color: rgb(69, 22, 112);
+            background-color: white;
+            border-radius: 25%;
+            padding: 5px;
         }
     </style>
 </head>
-
+<!-- HTML Body -->
 <body>
+
     <div id="outer">
         <div id="main_box">
             <h2>ROLL A DICE</h2>
-            <p id="diceroll_value"></p>
-            <button id="refresh_button" >Roll Dice</button>
+            <h3 id="diceroll_value"></h3>
+            <br>
+            <button id="refresh_button">Roll Dice</button>
         </div>
     </div>
+
+    <!-- Java Script -->
     <script>
-        function rollDice() {
-            let dice_value = Math.floor((Math.random() * 6) + 1);
-            document.getElementById("diceroll_value").innerHTML = dice_value;
-        }
         //When button click it's refresh
         document.getElementById("refresh_button").onclick = rollDice;
 
         // Optionally, roll the dice once when the page loads
         rollDice();
+
+        function rollDice() {
+            let dice_value = Math.floor((Math.random() * 6) + 1);
+            document.getElementById("diceroll_value").innerHTML = dice_value;
+        }
     </script>
 </body>
 
